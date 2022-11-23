@@ -4,14 +4,16 @@ import { Text, TouchableOpacity, View } from 'react-native'
 import SampleTwo from './views/SampleTwo';
 import SampleThree from './views/SampleThree';
 import SampleFour from './views/SampleFour';
+import SampleFive from './views/SampleFive';
 
 function main() {
 
     return (
         // <SampleOne />
         // <SampleTwo />
-        <SampleThree />
+        // <SampleThree />
         // <SampleFour />
+        <SampleFive />
     );
 }
 

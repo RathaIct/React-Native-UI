@@ -34,9 +34,15 @@ function SampleFour(props) {
                         </TouchableOpacity>
                         <OrSignIn />
                         <View style={styles.groupButtons}>
-                            <ButtonComponent image={AssetSvg.facebook} />
-                            <ButtonComponent image={AssetImage.google} />
-                            <ButtonComponent image={AssetImage.facebook} />
+                            <ButtonComponent>
+                                <AssetSvg.google width={30} height={30} />
+                            </ButtonComponent>
+                            <ButtonComponent>
+                                <AssetSvg.apple width={30} height={30} />
+                            </ButtonComponent>
+                            <ButtonComponent>
+                                <AssetSvg.twitter width={30} height={30} />
+                            </ButtonComponent>
                         </View>
                     </View>
                 </SafeAreaView>
@@ -63,16 +69,18 @@ function SampleFour(props) {
             </View>
         );
     }
-    function ButtonComponent({ image }) {
+    function ButtonComponent(props) {
         return (
-            <View style={{
-                paddingVertical: 8,
-                paddingHorizontal: 32,
-                backgroundColor: "#111111",
-                borderRadius: 8,
-            }}>
-                <Image style={{ width: 40, height: 40 }} source={image} />
-            </View>
+            <TouchableOpacity onPress={props.onPress}>
+                <View style={{
+                    paddingVertical: 8,
+                    paddingHorizontal: 32,
+                    backgroundColor: "#111111",
+                    borderRadius: 8,
+                }}>
+                    {props.children}
+                </View>
+            </TouchableOpacity>
         );
     }
 
