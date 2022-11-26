@@ -5,6 +5,7 @@ import SampleTwo from './views/SampleTwo';
 import SampleThree from './views/SampleThree';
 import SampleFour from './views/SampleFour';
 import SampleFive from './views/SampleFive';
+import SampleSix from './views/SampleSix';
 
 function main() {
 
@@ -13,7 +14,8 @@ function main() {
         // <SampleTwo />
         // <SampleThree />
         // <SampleFour />
-        <SampleFive />
+        // <SampleFive />
+        <SampleSix />
     );
 }
 
